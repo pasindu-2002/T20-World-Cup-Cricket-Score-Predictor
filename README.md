@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>T20 World Cup Cricket Score Predictor</h1>
-<img src="static/images/logo.png" alt="T20 World Cup" style="width:100%;max-width:100px;">
+<img src="static/images/logo.png" alt="T20 World Cup" style="height:50%;max-width:100px;">
 <p>Welcome to the T20 World Cup Cricket Score Predictor repository! This project leverages machine learning techniques to predict scores for T20 World Cup cricket matches.</p>
 <h2>Table of Contents</h2>
 <ul>
