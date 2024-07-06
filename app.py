@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the model
-pipe = pickle.load(open('pipe.pkl', 'rb'))
+pipe = pickle.load(open('model.pkl', 'rb'))
 
 teams = [
     'Australia', 'India', 'Bangladesh', 'New Zealand', 'South Africa', 

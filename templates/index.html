@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="static/images/logo.png">;
+    <link rel="icon" type="image/x-icon" href="static/images/logo.png">
     <title>Cricket Score Predictor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
-            padding-top: 2px;
+            padding-top: 15px;
             background-color: #121212;
             color: #ffffff;
         }
@@ -58,6 +58,7 @@
             color: #cccccc;
         }
     </style>
+
     <script>
         function updateTeamImage(team, elementId) {
             const imgElement = document.getElementById(elementId);
@@ -131,7 +132,7 @@
                 <label for="current_score">Current Score</label>
                 <input type="number" class="form-control" name="current_score" id="current_score" placeholder="Enter current score" required>
             </div>
-            //Test Commit
+
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="overs">Overs Done (works for over > 5)</label>
@@ -158,13 +159,35 @@
     <script>
         function validateForm() {
             var isValid = true;
+            var overs = parseFloat(document.getElementById('overs').value);
+            var wickets = parseInt(document.getElementById('wickets').value);
+
             // Validate each required field
             $('form :input[required]').each(function() {
                 if ($(this).val() === '') {
                     isValid = false;
                     $(this).addClass('is-invalid');
+                } else {
+                    $(this).removeClass('is-invalid');
                 }
             });
+
+            // Validate overs between 6 and 19
+            if (overs < 6 || overs > 19) {
+                isValid = false;
+                $('#overs').addClass('is-invalid');
+            } else {
+                $('#overs').removeClass('is-invalid');
+            }
+
+            // Validate wickets maximum 9
+            if (wickets > 9) {
+                isValid = false;
+                $('#wickets').addClass('is-invalid');
+            } else {
+                $('#wickets').removeClass('is-invalid');
+            }
+
             return isValid;
         }
     </script>
