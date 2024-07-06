@@ -1,0 +1,63 @@
+// @required
+
+
+
+// Responsive
+//------------------------------------------
+
+// By screen size
+$media_xxl:			                        "(max-width: 1679px)";
+$media_xl:			                        "(max-width: 1439px)";
+$media_lg:			                        "(max-width: 1279px)";
+$media_md_lg:		"(min-width:  768px) and (max-width: 1279px)";
+$media_md_over:		"(min-width: 1024px)";
+$media_md:			                        "(max-width: 1023px)";
+$media_wp_fix:		"(min-width:  601px) and (max-width:  782px)";
+$media_wp_over:		"(min-width:  600px)";
+$media_sm:			                        "(max-width:  767px)";
+$media_sm_wp:		                        "(max-width:  600px)";
+$media_xs:			                        "(max-width:  479px)";
+
+// By device
+$media_wide:		"(min-width: 2160px)";
+$media_desktop:		"(min-width: 1680px) and (max-width: 2159px)";
+$media_notebook:	"(min-width: 1280px) and (max-width: 1679px)";
+$media_tablet:		"(min-width:  768px) and (max-width: 1279px)";
+$media_not_mobile:	"(min-width:  768px)";
+$media_mobile:		                        "(max-width:  767px)";
+
+
+
+// General settings
+//------------------------------------------
+
+$theme_icons: "fontello";						// font-family for the font with theme-specific icons
+$trx_addons_icons: "trx_addons_icons";			// font-family for the font with plugin-specific icons
+
+$hide_scrollbars_in_gb: false;					// Hide scrollbars in the editor area and in the sidebar in WordPress 5.0+ (or Gutenberg)
+
+// Calculate all dimensions depend from page width
+@mixin page_dimensions($responsive:0, $expand_narrow: 0) {
+	// Sidebar width: 1st factor (expression) - proportional, 2nd factor - constant
+	--theme-var-sidebar: clamp( var(--theme-var-sidebar_width_min, 150px), calc( var(--theme-var-page) * var(--theme-var-sidebar_prc) * var(--theme-var-sidebar_proportional) + var(--theme-var-sidebar_width) * ( 1 - var(--theme-var-sidebar_proportional) ) ), var(--theme-var-sidebar_width_max, 500px) );
+	// Sidebar gap: 1st factor (expression) - proportional, 2nd factor - constant
+	--theme-var-sidebar_gap: clamp( var(--theme-var-sidebar_gap_width_min, 0px), calc( var(--theme-var-page) * var(--theme-var-sidebar_gap_prc) * var(--theme-var-sidebar_proportional) + var(--theme-var-sidebar_gap_width) * ( 1 - var(--theme-var-sidebar_proportional) ) ), var(--theme-var-sidebar_gap_width_max, 100px) );
+	// Sidebar and Gap together
+	--theme-var-sidebar_and_gap: calc( var(--theme-var-sidebar) + var(--theme-var-sidebar_gap) );
+
+	// Content width
+	@if $responsive == 1 {
+		--theme-var-content: var(--theme-var-page);
+	} @else {
+		--theme-var-content: calc( var(--theme-var-page) - var(--theme-var-sidebar) - var(--theme-var-sidebar_gap) );
+	}
+
+	// Narrow content width and left padding
+	@if $expand_narrow == 1 {
+		--theme-var-content_narrow: var(--theme-var-content);
+		--theme-var-padding_narrow: 0px;
+	} @else {
+		--theme-var-content_narrow: calc( var(--theme-var-content) * var(--theme-var-koef_narrow) );
+		--theme-var-padding_narrow: calc( var(--theme-var-content) * ( 1 - var(--theme-var-koef_narrow) ) );
+	}
+}

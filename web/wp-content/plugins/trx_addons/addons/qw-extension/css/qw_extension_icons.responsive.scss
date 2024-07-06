@@ -1,0 +1,43 @@
+@import "../../../css/_mixins.scss";
+@import "../../../css/_trx_addons.vars.scss";
+
+//@mixin sc_icons--xl() {
+@media #{$media_xl} {
+    .sc_icons_qw-stylish {
+        .sc_icons_item {
+            padding: 5.2em 2em 4em;
+        }
+        &.sc_icons .sc_icons_icon + .sc_icons_item_details, 
+        &.sc_icons .sc_icons_image + .sc_icons_item_details {
+            margin-top: 2em;
+        }
+    } 
+}
+//@mixin sc_icons--lg() {
+@media #{$media_lg} {
+	
+}
+//@mixin sc_icons--md() {
+@media #{$media_md} {
+
+}
+
+//@mixin sc_icons--sm() {
+@media #{$media_sm} {
+    .sc_icons_qw-stylish {
+        .sc_icons_item {
+            padding: 4.5em 1.8em 3em;
+        }
+        &.sc_icons .sc_icons_icon + .sc_icons_item_details, 
+        &.sc_icons .sc_icons_image + .sc_icons_item_details {
+            margin-top: 1.5em;
+        }
+    }
+}
+
+//@mixin sc_icons--sm_wp() {
+@media #{$media_sm_wp} {
+}
+
+//@mixin sc_icons--xs() {
+@media #{$media_xs} {}

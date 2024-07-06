@@ -1,0 +1,21 @@
+@media (max-width: 1439px) {
+    .sc_icons_qw-stylish .sc_icons_item {
+        padding: 5.2em 2em 4em;
+    }
+    .sc_icons_qw-stylish.sc_icons .sc_icons_icon+.sc_icons_item_details,
+    .sc_icons_qw-stylish.sc_icons .sc_icons_image+.sc_icons_item_details {
+        margin-top: 2em;
+    }
+}
+
+@media (max-width: 767px) {
+    .sc_icons_qw-stylish .sc_icons_item {
+        padding: 4.5em 1.8em 3em;
+    }
+    .sc_icons_qw-stylish.sc_icons .sc_icons_icon+.sc_icons_item_details,
+    .sc_icons_qw-stylish.sc_icons .sc_icons_image+.sc_icons_item_details {
+        margin-top: 1.5em;
+    }
+}
+
+/*# sourceMappingURL=qw_extension_icons.responsive.css.map */
