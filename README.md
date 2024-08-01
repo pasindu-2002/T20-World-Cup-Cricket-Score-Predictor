@@ -76,5 +76,11 @@ print(f"Predicted Score: {predicted_score}")</code></pre>
 </ol>
 <h2 id="license">License</h2>
 <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="license">Interface</h2>
+![Screenshot 2024-08-01 091136](https://github.com/user-attachments/assets/fb8e1cad-ba6f-4f3b-bd74-e7ed18276b15)
+![Screenshot 2024-08-01 091200](https://github.com/user-attachments/assets/3d3dd4ab-50ba-4a83-bfe3-615f4b332418)
+![Screenshot 2024-08-01 091240](https://github.com/user-attachments/assets/29af6406-42ea-490f-a71f-9dc46c2a19b2)
+
 </body>
 </html>
