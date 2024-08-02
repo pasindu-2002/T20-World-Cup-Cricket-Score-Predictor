@@ -83,7 +83,7 @@ print(f"Predicted Score: {predicted_score}")</code></pre>
 
 <img src="https://github.com/user-attachments/assets/3d3dd4ab-50ba-4a83-bfe3-615f4b332418" alt="">
 
-<img src="https://github.com/user-attachments/assets/fb8e1cad-ba6f-4f3b-bd74-e7ed18276b15" alt="">
+<img src="https://github.com/user-attachments/assets/36911f5d-bf10-483d-b354-be5ff1906fed" alt="">
 
 </body>
 </html>
